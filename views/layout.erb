@@ -5,7 +5,20 @@
 		 <link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
+<header>
 
+		<nav class="top-navigation";>
+
+			<form method="POST" action="/sign-in">
+			<label for="username">Username</label>
+			<input type="text" name="username" size="5">
+			<label for="password">Password</label>
+			<input type="password" name="password" size="5">
+			<input type="submit">
+			</form>
+			<h2>   Company name</h2>
+       </nav>
+   </header>
 
 <%= yield %>
 </body>
