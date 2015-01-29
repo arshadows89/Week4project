@@ -1,5 +1,5 @@
 body {
-	background-color: #FF99FF;
+	background-color: #F8F8F8 ;
 	height:100%;
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -7,13 +7,16 @@ body {
 .top-navigation {
 	padding-bottom: 35px;
 	margin-bottom: 200px;
-	background-color:#FF66FF;
+	background-color:#F8F8F8 ;
 	height:20px;
 	width: 100%;
   	position:fixed;
 	top:0;
 	left:0;
   	z-index: 9999;
+  	border-bottom-style: solid;
+  	border-bottom-width: 3px;
+  	border-bottom-color: blue;
 }
 
 form {
@@ -27,7 +30,7 @@ form {
 
 div.signup{
 
-	margin-top: 60px;
+	margin-top: 80px;
 }
 .signup a{
 	margin-left: 44%;
@@ -38,7 +41,7 @@ div.signup{
 
 h2 {
 
-	color :white;
+	color :black;
 }
 
 #main2 {
@@ -48,7 +51,7 @@ h2 {
 	border:1px solid #ccc;
 	font:16px/26px Georgia, Garamond, Serif;
 	overflow:auto;
-	background-color: rgba(102,204,255,.5);
+	background-color: rgba(232,232,232,.5);
   	padding: 2em;
   	border-radius: 16px;
   	margin-left: auto;
