@@ -44,32 +44,7 @@ get '/signup' do
 end
 
 post '/signup' do
-  @user = User.create(fname: params[:user][:fname], lname: params[:user][:lname], email: params[:user][:email], accountname: params[:user][:accountname], password: params[:user][:password])
+  @user = User.create(fname: params[:user][:fname], lname: params[:user][:lname], email: params[:user][:email], username: params[:user][:username], password: params[:user][:password], Bio: params[:user][:Bio], Interest1: params[:user][:Interest1], Interest2: params[:user][:Interest2], Interest3: params[:user][:Interest3], location: params[:user][:location])
   puts params.inspect
-  # # if params[:user][:password] != nil && (for each one)
-  #   user_fname = params[:user][:fname]
-  #   user_lname = params[:user][:lname]
-  #   user_email = params[:user][:email]
-  #   user_accountname = params[:user][:accountname]
-  #   user_password = params[:user][:password]
-
-  #   flash[:signin] = "Sign in with your new created account."
-  #   redirect '/signin'
-  # else
-  # 	# user doesnt fill out all the forms
-  # end
 end
 
-
-
-# 2.1.2 :012 >   params
-#  => {"user"=>{"fname"=>"Cameron", "lname"=>"Snyder", "email"=>"arshadows89", "accountname"=>"asdasd", "password"=>"qwerty123"}} 
-# 2.1.2 :013 > params["user"]["email"]
-#  => "arshadows89" 
-# 2.1.2 :014 > params["user"]["password"]
-#  => "qwerty123" 
-# 2.1.2 :015 > params["user"]
-#  => {"fname"=>"Cameron", "lname"=>"Snyder", "email"=>"arshadows89", "accountname"=>"asdasd", "password"=>"qwerty123"} 
-
-
-#  sp params user might be able to write  a new user..., check new slide for info....
