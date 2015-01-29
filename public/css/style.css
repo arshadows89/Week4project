@@ -1,12 +1,13 @@
 body {
-	background-color: #FF6600;
+	background-color: #FF99FF;
 	height:100%;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .top-navigation {
 	padding-bottom: 35px;
 	margin-bottom: 200px;
-	background-color:#FF3300;
+	background-color:#FF66FF;
 	height:20px;
 	width: 100%;
   	position:fixed;
@@ -24,12 +25,32 @@ form {
   	font-size:90%;
 }
 
-h1#main {
-	color:white;
+div.signup{
+
+	margin-top: 60px;
+}
+.signup a{
+	margin-left: 44%;
+	color:#CC0033;
 	text-align: center;
-	margin-top: 70px;
+	font-size: 30px;
 }
 
 h2 {
+
 	color :white;
+}
+
+#main2 {
+	margin-top: 50px;
+	height:600px;
+	width:60%;
+	border:1px solid #ccc;
+	font:16px/26px Georgia, Garamond, Serif;
+	overflow:auto;
+	background-color: rgba(102,204,255,.5);
+  	padding: 2em;
+  	border-radius: 16px;
+  	margin-left: auto;
+  	margin-right: auto;
 }
