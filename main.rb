@@ -16,9 +16,10 @@ def current_user
 	end
 end
 
+
 get '/' do
 	@users = User.all
-	erb :index
+	erb :home
 end
 
 get '/signin' do
