@@ -48,3 +48,8 @@ post '/signup' do
   puts params.inspect
 end
 
+post '/signout' do
+  @session = nil
+  redirect '/'
+end
+
