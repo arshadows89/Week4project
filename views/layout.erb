@@ -5,18 +5,33 @@
 		 <link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
+<<<<<<< HEAD
 <header>
 	
 		<nav class="top-navigation";>
 			
+=======
+	<header>
+		<nav class="top-navigation";>
+		<% if @user != nil %>
+>>>>>>> 8a783e24d8fb91eea745a2c4c2f6e970bc412818
 			<form method="POST" action="/signin">
 			<label for="username">Username</label>
 			<input type="text" name="[user]username" size="5">
 			<label for="password">Password</label>
 			<input type="password" name="[user]password" size="5">
 			<input type="submit">
+			 </form>
+		<% else %>
+			<form method="POST" action="/signout">
+			<input type="submit" value="Sign out"> 
 			</form>
+<<<<<<< HEAD
 			<img src="images/logo.png" style="margin-top:10px; margin-left:20px;">
+=======
+		<% end %>
+			<h2>Company name</h2>
+>>>>>>> 8a783e24d8fb91eea745a2c4c2f6e970bc412818
        </nav>
    </header>
 
