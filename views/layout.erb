@@ -9,7 +9,7 @@
 		<nav class="top-navigation";>
 		<% if session[:user_id] != nil %>
 		<a href="/profile.erb"><b>Go to profile<b></a>
-		<%= current_user.fname if current_user %>
+		<%= current_user.username if current_user %>
 			<form method="POST" action="signout">
 				<input type="submit" value="Sign out"> 
 			</form>
