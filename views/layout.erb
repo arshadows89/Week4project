@@ -9,15 +9,18 @@
 
 	<header>
 		<nav class="top-navigation";>
+			<a href="/"><img src="images/logo.png" style="margin-top:25px; margin-left:100px;"></a>
 		<% if @user != nil %>
-		<a href="/profile.erb"><b>Go to profile<b></a>
+		
 		<form method="POST" action="signout">
 			<input type="submit" value="Sign out"> 
 			</form>
 			
 		<% else %>
-		<%= current_user.fname if current_user %>
+			
 			<form method="POST" action="signin">
+				<a href="/profile"><b>Go to profile<b></a>
+				<%= current_user.fname if current_user %>
 			<label for="username">Username</label>
 			<input type="text" name="[user]username" size="5">
 			<label for="password">Password</label>
@@ -35,10 +38,11 @@
     			<% end %>
 
 			 </form>
-			 <a href="/"><img src="images/logo.png" style="margin-top:35px; margin-left:100px;"></a>
+			 
 			
 
 		<% end %>
+		
        </nav>
        
    </header>
