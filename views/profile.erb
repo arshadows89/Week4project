@@ -24,7 +24,7 @@
 	</form>
 
 	<h1> Your last 10 posts</h1>
-	<% current_user.posts.last(10).each do |x| %>
+	<% current_user.posts.last(10).reverse.each do |x| %>
 	<p><%= x.content %></p>
 	<% end %>
 

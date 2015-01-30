@@ -121,6 +121,16 @@ post '/post_feed' do
   redirect '/profile'
 end
 
+get '/follow/:id' do
+  @relationship = Relationship.new(follower_id: current_user.id, followed_id: params[:id])
+  if @relationship.save
+    flash[:notice] = "You've successfully followed #{User.find(params[:id]).fname}."
+  else
+    flash[:alert] = "There was an error following that user."
+  end
+  redirect back
+end
+
 
 
 
