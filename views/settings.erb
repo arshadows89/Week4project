@@ -1,0 +1,10 @@
+<!-- delete account -->
+<p>Delete Your account</p>
+<form action="/account_delete" method="POST">
+  <label>Delete <%= current_user.username if current_user %>?</label>
+  <input name="[user]fname" type="text">
+   <br><br><input type="submit" value="submit">
+</form>
+
+
+<!-- edit account details -->

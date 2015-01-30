@@ -62,3 +62,6 @@ post '/signout' do
   redirect '/'
 end
 
+get '/settings'
+  erb :settings
+end
