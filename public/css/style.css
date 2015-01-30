@@ -83,3 +83,14 @@ h2 {
      background-position: 50% 1%;
    	background-attachment: fixed;
 }
+
+#sidebar {
+	width:200px;
+	height:500px;
+	border-color: #0066FF;
+	float:left;
+	border-style: solid;
+	border-left-color: transparent;
+	border-width: 3px;
+
+}
