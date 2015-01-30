@@ -27,6 +27,12 @@
         		<%= flash[:alert] %>
     			</div>
     			<% end %>
+    			<% if flash[:notice] %>
+      			<div class="flash notice">
+        		<%= flash[:notice] %>
+    			</div>
+    			<% end %>
+
 			 </form>
 			 <a href="/"><img src="images/logo.png" style="margin-top:35px; margin-left:100px;"></a>
 			

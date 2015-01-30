@@ -54,6 +54,7 @@ end
 post '/signup' do
   @user = User.create(fname: params[:user][:fname], lname: params[:user][:lname], email: params[:user][:email], username: params[:user][:username], password: params[:user][:password], Bio: params[:user][:Bio], Interest1: params[:user][:Interest1], Interest2: params[:user][:Interest2], Interest3: params[:user][:Interest3], location: params[:user][:location])
   puts params.inspect
+  redirect '/'
 end
 
 post '/signout' do
