@@ -62,9 +62,15 @@ post '/signout' do
   redirect '/'
 end
 
+get '/signout' do
+  session[:user_id] = nil
+  redirect '/'
+end
+
 get '/settings' do
   erb :settings
 end
+
 
 post '/account_delete' do
   previous_account = (session[:user_id])
@@ -107,6 +113,7 @@ post '/change_info' do
   end
   redirect '/'
 end
+
 
 
 

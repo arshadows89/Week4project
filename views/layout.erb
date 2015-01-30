@@ -7,10 +7,12 @@
 	<body>
 	<header>
 		<nav class="top-navigation";>
+			<a href="/"><img src="images/logo.png" style="margin-top:35px; margin-left:100px; float:left;"></a>
 		<% if session[:user_id] != nil %>
-		<a href="/profile.erb"><b>Go to profile<b></a>
-		<%= current_user.username if current_user %>
+		
 			<form method="POST" action="signout">
+				<%= current_user.username if current_user %>
+				<a href="/profile"><b>Go to profile<b></a>
 				<input type="submit" value="Sign out"> 
 			</form>
 		<% else %>
@@ -36,7 +38,7 @@
     			</div>
     			<% end %>
 			 </form>
-			 <a href="/"><img src="images/logo.png" style="margin-top:35px; margin-left:100px;"></a>
+			 
 		<% end %>
        </nav>    
    </header>
