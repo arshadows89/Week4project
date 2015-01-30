@@ -12,7 +12,7 @@
 		
 			<form method="POST" action="signout">
 				<%= current_user.username if current_user %>
-				<a href="/profile.erb"><b>Go to profile<b></a>
+				<a href="/profile"><b>Go to profile<b></a>
 				<input type="submit" value="Sign out"> 
 			</form>
 		<% else %>
