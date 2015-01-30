@@ -13,11 +13,17 @@
 </div>
 
 <div id="profilefeed">
-	<label style="">New feed?<br></label>
-	<input name="[user]feed" type="text" style="
-	width:500px; height:50px; position:centered;
-	"><label><br>
+	<form action="/post_feed" method="POST">
+		<label style="">New feed?<br></label>
+		<input name="[user]feed" type="text" style="
+		width:500px; height:50px; position:centered;
+		">
+		<br><br><input type="submit" value="submit">
+	</form>
 
+	<% current_user.posts.last(10).each do |x| %>
+	<p><%= x.content %></p>
+	<% end %>
 
 	</div>
 

@@ -114,6 +114,12 @@ post '/change_info' do
   redirect '/'
 end
 
+post '/post_feed' do
+  if params[:user][:feed] != ''
+    current_user.posts.create(content: params[:user][:feed])
+  end
+  redirect '/profile'
+end
 
 
 
