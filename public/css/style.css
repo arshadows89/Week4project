@@ -85,12 +85,28 @@ h2 {
 }
 
 #sidebar {
-	width:200px;
-	height:500px;
+	width:250px;
+	height:600px;
 	border-color: #0066FF;
-	float:left;
 	border-style: solid;
 	border-left-color: transparent;
 	border-width: 3px;
+	font-size: 12px;
+	padding: 10px 10px;
+	float:left;
+	position: fixed;
+	
+}
+
+#profilefeed{
+	margin-left:400px;
+	margin-right:auto;
+	height:600px;
+	width:40%;
+	position: relative;
+	overflow-y: auto;
+	background-color: rgba(0,102,204,.2);
+  	padding: 4em;
+  	border-radius: 16px;
 
 }
