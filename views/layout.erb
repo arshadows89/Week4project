@@ -7,12 +7,13 @@
 	<body>
 	<header>
 		<nav class="top-navigation";>
-			<a href="/"><img src="images/logo.png" style="margin-top:35px; margin-left:100px; float:left;"></a>
+			<a href="/"><img src="images/logo.png" style="margin-top:35px; margin-left:100px; float:left; width:150px;"></a>
 		<% if session[:user_id] != nil %>
 		
 			<form method="POST" action="signout">
-				<%= current_user.username if current_user %>
-				<a href="/profile"><b>Go to profile<b></a>
+				<b><%= current_user.username if current_user %>
+				<a href="/profile">Go to profile</a>
+				<a href="/settings">Edit my settings</b></a>
 				<input type="submit" value="Sign out"> 
 			</form>
 		<% else %>

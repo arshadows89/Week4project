@@ -110,3 +110,7 @@ h2 {
   	border-radius: 16px;
 
 }
+
+a:link {
+    text-decoration: none;
+}
