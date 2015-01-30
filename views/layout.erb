@@ -5,18 +5,15 @@
 		 <link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-			
-
 	<header>
 		<nav class="top-navigation";>
-		<% if @user != nil %>
+		<% if session[:user_id] != nil %>
 		<a href="/profile.erb"><b>Go to profile<b></a>
-		<form method="POST" action="signout">
-			<input type="submit" value="Sign out"> 
-			</form>
-			
-		<% else %>
 		<%= current_user.fname if current_user %>
+			<form method="POST" action="signout">
+				<input type="submit" value="Sign out"> 
+			</form>
+		<% else %>
 			<form method="POST" action="signin">
 			<label for="username">Username</label>
 			<input type="text" name="[user]username" size="5">
@@ -33,16 +30,11 @@
         		<%= flash[:notice] %>
     			</div>
     			<% end %>
-
 			 </form>
 			 <a href="/"><img src="images/logo.png" style="margin-top:35px; margin-left:100px;"></a>
-			
-
 		<% end %>
-       </nav>
-       
+       </nav>    
    </header>
-
 <%= yield %>
 </body>
 </html>

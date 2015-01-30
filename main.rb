@@ -58,7 +58,7 @@ post '/signup' do
 end
 
 post '/signout' do
-  @session = nil
+  session[:user_id] = nil
   redirect '/'
 end
 
