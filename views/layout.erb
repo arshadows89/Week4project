@@ -10,21 +10,26 @@
 	<header>
 		<nav class="top-navigation";>
 		<% if @user != nil %>
-		<form method="POST" action="/signout">
+		<a href="/profile.erb"><b>Go to profile<b></a>
+		<form method="POST" action="signout">
 			<input type="submit" value="Sign out"> 
 			</form>
 			
 		<% else %>
-			<form method="POST" action="/signin">
+			<form method="POST" action="signin">
 			<label for="username">Username</label>
 			<input type="text" name="[user]username" size="5">
 			<label for="password">Password</label>
 			<input type="password" name="[user]password" size="5">
-			<input type="submit">
+			<input type="submit" value="Log in!">
+			    <% if flash[:alert] %>
+      			<div class="flash notice">
+        		<%= flash[:alert] %>
+    			</div>
+    			<% end %>
 			 </form>
+			 <a href="/"><img src="images/logo.png" style="margin-top:35px; margin-left:100px;"></a>
 			
-
-			<img src="images/logo.png" style="margin-top:10px; margin-left:20px;">
 
 		<% end %>
        </nav>

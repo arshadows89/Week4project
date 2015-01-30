@@ -1,31 +1,53 @@
-    <% if flash[:alert] %>
-      <div class="flash notice">
-        <%= flash[:alert] %>
-      </div>
-    <% end %>
 
-<p>Sign up here</p>
-<form action="/signup" method="POST">
-  <label>First name</label>
-  <input name="[user]fname" type="text"></input>
-  <label>Last Name</label>
-  <input name="[user]lname" type="text"></input>
-  <label>Email</label>
-  <input name="[user]email" type="text"></input>
-  <label>Username</label>
-  <input name="[user]username" type="text"></input>
-  <label>Password</label>
-  <input name="[user]password" type="password"></input>
-  <label>location</label>
-  <input name="[user]location" type="text"></input>
-  <label>Interests(1)</label>
-  <input name="[user]Interest1" type="text"></input>
-  <label>Interests(2)</label>
-  <input name="[user]Interest2" type="text"></input>
-  <label>Interests(3)</label>
-  <input name="[user]Interest3" type="text"></input>
-  <label>Bio</label>
-  <input name="[user]Bio" type="textarea"></input>
-  <input type="submit" value="submit"></input>
+<div id="signupbg">
+
+<div id="signup">
+<p style="
+    margin-right: 20px;
+"><b>Enter your private information</b></p>
+<form action="/profile" method="POST">
+  <label style="
+    margin-right: 20px;
+">First name</label>
+  <input name="[user]fname" type="text">
+  <br><br><label style="
+    margin-right: 18px;
+">Last Name</label>
+  <input name="[user]lname" type="text">
+   <br><br><label style="
+    margin-right: 56px;
+">Email</label>
+  <input name="[user]email" type="text">
+   <br><br><label style="
+    margin-right: 22px;
+">Username</label>
+  <input name="[user]username" type="text">
+   <br><br><label style="
+    margin-right: 25px;
+">Password</label>
+  <input name="[user]password" type="password">
+   <br><br><label style="
+    margin-right: 40px;
+">location</label>
+  <input name="[user]location" type="text">
+   <br><br><label style="
+    margin-right: 15px;
+">Interests(1)</label>
+  <input name="[user]Interest1" type="text">
+   <br><br><label style="
+    margin-right: 15px;
+">Interests(2)</label>
+  <input name="[user]Interest2" type="text">
+   <br><br><label style="
+    margin-right: 15px;
+">Interests(3)</label>
+  <input name="[user]Interest3" type="text">
+   <br><br><label style="
+    margin-right: 72px;
+">Bio</label>
+  <input name="[user]Bio" type="textarea">
+   <br><br><input type="submit" value="submit">
 </form>
-<p>
+</div>
+</div>
+

@@ -22,6 +22,14 @@ get '/' do
 	erb :home
 end
 
+get '/home' do
+  erb :home
+end
+
+get '/profile' do
+  erb :profile
+end
+
 get '/signin' do
 	erb :signin
 end
