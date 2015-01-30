@@ -62,6 +62,18 @@ post '/signout' do
   redirect '/'
 end
 
-get '/settings'
+get '/settings' do
   erb :settings
 end
+
+post '/account_delete' do
+
+  previous_account = (session[:user_id])
+  session[:user_id] = nil
+  User.find(previous_account).destroy
+  flash[:deleted_account] = "Your account #{previous_account} has been deleted."
+  redirect '/'
+end
+
+
+

@@ -25,6 +25,11 @@
         		<%= flash[:alert] %>
     			</div>
     			<% end %>
+    			<% if flash[:deleted_account] %>
+      			<div class="flash notice">
+        		<%= flash[:deleted_account] %>
+    			</div>
+    			<% end %>
     			<% if flash[:notice] %>
       			<div class="flash notice">
         		<%= flash[:notice] %>
