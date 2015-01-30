@@ -62,8 +62,6 @@ post '/signout' do
   redirect '/'
 end
 
-
-
 get '/signout' do
   session[:user_id] = nil
   redirect '/'
@@ -72,4 +70,57 @@ end
 get '/settings' do
   erb :settings
 end
+
+
+post '/account_delete' do
+  previous_account = (session[:user_id])
+  session[:user_id] = nil
+  User.find(previous_account).destroy
+  flash[:deleted_account] = "Your account #{previous_account} has been deleted."
+  redirect '/'
+end
+
+post '/change_info' do
+  if params[:user][:fname] != ''
+    current_user.update(fname: params[:user][:fname])
+  end
+  if params[:user][:lname] != ''
+    current_user.update(lname: params[:user][:lname])
+  end
+  if params[:user][:email] != ''
+    current_user.update(email: params[:user][:email])
+  end
+  if params[:user][:username] != ''
+    current_user.update(username: params[:user][:username])
+  end
+  if params[:user][:password] != ''
+    current_user.update(password: params[:user][:password])
+  end
+  if params[:user][:Bio] != ''
+    current_user.update(Bio: params[:user][:Bio])
+  end
+  if params[:user][:Interest1] != ''
+    current_user.update(Interest1: params[:user][:Interest1])
+  end
+  if params[:user][:Interest2] != ''
+    current_user.update(Interest2: params[:user][:Interest2])
+  end
+  if params[:user][:Interest3] != ''
+    current_user.update(Interest3: params[:user][:Interest3])
+  end
+  if params[:user][:location] != ''
+    current_user.update(location: params[:user][:location])
+  end
+  redirect '/'
+end
+
+
+
+
+
+
+
+
+
+
 
