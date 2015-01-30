@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+	<header>
+		<nav class="top-navigation";>
+			<a href="/"><img src="images/logo.png" style="margin-top:35px; margin-left:100px; float:left;"></a>
+		<% if session[:user_id] != nil %>
+		
+			<form method="POST" action="signout">
+				<%= current_user.username if current_user %>
+				<a href="/profile.erb"><b>Go to profile<b></a>
+				<input type="submit" value="Sign out"> 
+			</form>
+		<% else %>
+			<form method="POST" action="signin">
+			<label for="username">Username</label>
+			<input type="text" name="[user]username" size="5">
+			<label for="password">Password</label>
+			<input type="password" name="[user]password" size="5">
+			<input type="submit" value="Log in!">
+			    <% if flash[:alert] %>
+      			<div class="flash notice">
+        		<%= flash[:alert] %>
+    			</div>
+    			<% end %>
+    			<% if flash[:notice] %>
+      			<div class="flash notice">
+        		<%= flash[:notice] %>
+    			</div>
+    			<% end %>
+			 </form>
+			 
+		<% end %>
+       </nav>    
+   </header>
+<%= yield %>
+</body>
+</html>

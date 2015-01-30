@@ -62,3 +62,8 @@ post '/signout' do
   redirect '/'
 end
 
+
+get '/signout' do
+  session[:user_id] = nil
+  redirect '/'
+end
