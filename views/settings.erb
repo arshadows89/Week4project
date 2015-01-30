@@ -1,14 +1,24 @@
-<!-- delete account -->
-<p>Delete Your account</p>
-<form action="/account_delete" method="POST">
-  <label>Delete <%= current_user.username if current_user %>?</label>
-   <br><br><input type="submit" value="Delete ">
-
-</form>
-
-
+<div id="sidebar">
+  <div id="profilepic">
+    <img src="images/profile.png" style="
+    width:100% ">
+  
+  </div>
+    <p><b>About me</b><br><br>Name: &nbsp;<%= current_user.fname %>&nbsp;<%= current_user.lname %></p>
+    <p>Email address:&nbsp;<%= current_user.email %></p>
+    <p>Location:&nbsp;<%= current_user.location %></p>
+    <p>Interest1:&nbsp;<%= current_user.Interest1 %></p>
+    <p>Interest2:&nbsp;<%= current_user.Interest2 %></p>
+    <p>interest3:&nbsp;<%= current_user.Interest3 %></p>
+</div>
+<img src="images/dino.jpg" style="
+position:fixed; margin-left:55%;
+">
 <!-- edit account details -->
-<b>Change Your Info Below</b>
+<div id="settings">
+
+  <div id="insideSettings">
+<h2><b>Change Your Info Below</b></h2><br>
 <form action="/change_info" method="POST">
   <label style="
     margin-right: 20px;
@@ -52,3 +62,15 @@
   <input name="[user]Bio" type="textarea">
    <br><br><input type="submit" value="submit">
 </form>
+
+
+<!-- delete account -->
+<p>Delete Your account</p>
+<form action="/account_delete" method="POST">
+  <label>Delete <%= current_user.username if current_user %>?</label>
+   <br><br><input type="submit" value="Delete ">
+
+</form>
+  </div>
+
+</div>
