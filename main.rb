@@ -27,6 +27,7 @@ get '/home' do
 end
 
 get '/profile' do
+  @user = current_user if current_user
   erb :profile
 end
 
@@ -80,6 +81,11 @@ post '/account_delete' do
   redirect '/'
 end
 
+get '/profile/:id' do
+  @user = User.find(params[:id])
+  erb :profile
+end
+
 post '/change_info' do
   if params[:user][:fname] != ''
     current_user.update(fname: params[:user][:fname])
@@ -111,8 +117,9 @@ post '/change_info' do
   if params[:user][:location] != ''
     current_user.update(location: params[:user][:location])
   end
-  redirect '/'
+  redirect '/profile'
 end
+
 
 
 
