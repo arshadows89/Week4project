@@ -13,6 +13,7 @@
 </div>
 
 <div id="profilefeed">
+
 	<div id="inputfeed">
 	<img src="/images/guy.jpg" style="width:20%;">
 	<form action="/profile" method="POST" style="float:left; margin-right:20px;">
@@ -23,10 +24,16 @@
 	</form>
 	</div>
 
+
 		<div id="feedbody">
 <!-- 
 	feedgoes here -->
 		</div>
+
+	<% current_user.posts.last(10).each do |x| %>
+	<p><%= x.content %></p>
+	<% end %>
+
 
 </div>
 
