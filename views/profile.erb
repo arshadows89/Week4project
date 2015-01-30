@@ -1,20 +1,20 @@
 <div id="sidebar">
 	<div id="profilepic">
-		<img src="images/profile.png" style="
+		<img src="/images/profile.png" style="
 		width:100% ">
 	
 	</div>
-		<p><b>About me</b><br><br>Name: &nbsp;<%= current_user.fname %>&nbsp;<%= current_user.lname %></p>
-		<p>Email address:&nbsp;<%= current_user.email %></p>
-		<p>Location:&nbsp;<%= current_user.location %></p>
-		<p>Interest1:&nbsp;<%= current_user.Interest1 %></p>
-		<p>Interest2:&nbsp;<%= current_user.Interest2 %></p>
-		<p>interest3:&nbsp;<%= current_user.Interest3 %></p>
+		<p><b>About me</b><br><br>Name: &nbsp;<%= @user.fname %>&nbsp;<%= @user.lname %></p>
+		<p>Email address:&nbsp;<%= @user.email %></p>
+		<p>Location:&nbsp;<%= @user.location %></p>
+		<p>Interest1:&nbsp;<%= @user.Interest1 %></p>
+		<p>Interest2:&nbsp;<%= @user.Interest2 %></p>
+		<p>interest3:&nbsp;<%= @user.Interest3 %></p>
 </div>
 
 <div id="profilefeed">
 
-	<img src="images/guy.jpg" style="width:20%;">
+	<img src="/images/guy.jpg" style="width:20%;">
 	<form action="/post_feed" method="POST" style="float:left; margin-right:20px;">
 		<label style="">New feed?<br></label>
 		<input name="[user]feed" type="text" style="

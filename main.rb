@@ -16,6 +16,10 @@ def current_user
 	end
 end
 
+get "/profile/:id" do
+  @user = User.find(params[:id])
+  erb :profile
+end
 
 get '/' do
 	@users = User.all
@@ -86,6 +90,15 @@ get '/profile/:id' do
   erb :profile
 end
 
+post '/post_feed' do
+  if params[:user][:feed] != ''
+    current_user.posts.create(content: params[:user][:feed])
+  end
+  redirect '/profile'
+end
+
+
+
 post '/change_info' do
   if params[:user][:fname] != ''
     current_user.update(fname: params[:user][:fname])
@@ -119,14 +132,6 @@ post '/change_info' do
   end
   redirect '/profile'
 end
-
-post '/post_feed' do
-  if params[:user][:feed] != ''
-    current_user.posts.create(content: params[:user][:feed])
-  end
-  redirect '/profile'
-end
-
 
 
 
