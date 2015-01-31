@@ -14,7 +14,7 @@
 
 <div id="profilefeed">
 
-	<img src="/images/guy.jpg" style="width:20%;">
+	<img src="/images/guy.jpg" style="width:20%; ">
 	<form action="/post_feed" method="POST" style="float:left; margin-right:20px;">
 		<label style="">New feed?<br></label>
 		<input name="[user]feed" type="text" style="
@@ -22,8 +22,8 @@
 		">
 		<br><br><input type="submit" value="submit">
 	</form>
-
-	<h1> Your last 10 posts</h1>
+	
+	<h1><br> Your last 10 posts</h1>
 	<% current_user.posts.last(10).reverse.each do |x| %>
 	<p><%= x.content %></p>
 	<% end %>
