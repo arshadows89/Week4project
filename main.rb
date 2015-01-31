@@ -16,9 +16,14 @@ def current_user
 	end
 end
 
+get "/profile/:id" do
+  @user = User.find(params[:id])
+  erb :profile
+end
+
 
 get '/' do
-	@users = User.all
+	@user = User.all
 	erb :home
 end
 
@@ -27,8 +32,9 @@ get '/home' do
 end
 
 get '/profile' do
-  erb :profile
-end
+  @user = current_user if current_user
+   erb :profile
+ end
 
 get '/signin' do
 	erb :signin
