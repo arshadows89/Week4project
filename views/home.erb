@@ -6,7 +6,7 @@
 <div id = "main2">
 
 	<h1><i><u>New posts!</i></u></h1>
-	<% Post.last(10).each do |x| %>
+	<% Post.last(10).reverse.each do |x| %>
 	<p><%= x.user.username + ' | '+ x.content %></p>
 	<% end %>
 

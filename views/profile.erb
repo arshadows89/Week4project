@@ -15,6 +15,11 @@
 <div id="profilefeed">
 
 	<img src="/images/guy.jpg" style="width:20%; ">
+
+	<form action="/follow/:id" method="POST" style="float:left; margin-right:20px;">
+		<br><br><input type="submit" value="Click to Follow">
+	</form>
+
 	<form action="/post_feed" method="POST" style="float:left; margin-right:20px;">
 		<label style="">New feed?<br></label>
 		<input name="[user]feed" type="text" style="
