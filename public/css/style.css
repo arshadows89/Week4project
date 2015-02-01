@@ -142,3 +142,9 @@ a:link {
 	border-style: dotted;
 
 }
+
+#followed {
+	overflow: auto;
+	height:130px;
+	width:230px;
+}
