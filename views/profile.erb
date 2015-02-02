@@ -2,33 +2,44 @@
 	<div id="profilepic">
 		<img src="/images/profile.png" style="
 		width:100% ">
-	
+		<form action="/follow/:id" method="POST" style="float:left; margin-right:20px;">
+		<p><a href="/follow/<%= @user.id %>">Click to follow this user</a></p>
+	</form>
 	</div>
-		<p><b>About me</b><br><br>Name: &nbsp;<%= @user.fname %>&nbsp;<%= @user.lname %></p>
+		<p><br><br><b>About me</b><br><br>Name: &nbsp;<%= @user.fname %>&nbsp;<%= @user.lname %></p>
 		<p>Email address:&nbsp;<%= @user.email %></p>
 		<p>Location:&nbsp;<%= @user.location %></p>
 		<p>Interest1:&nbsp;<%= @user.Interest1 %></p>
 		<p>Interest2:&nbsp;<%= @user.Interest2 %></p>
 		<p>interest3:&nbsp;<%= @user.Interest3 %></p>
+		<p><b>Users you have followed</b></p>
+		<div id="followed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+		</div>
 </div>
+
 
 <div id="profilefeed">
 
 	<img src="/images/guy.jpg" style="width:20%; ">
 
-	<form action="/follow/:id" method="POST" style="float:left; margin-right:20px;">
-		<br><br><input type="submit" value="Click to Follow">
-	</form>
+	
 
 	<form action="/post_feed" method="POST" style="float:left; margin-right:20px;">
 		<label style="">New feed?<br></label>
 		<input name="[user]feed" type="text" style="
-		width:300px; height:50px;
+		width:500px; height:50px;
 		">
-		<br><br><input type="submit" value="submit">
+		<input type="submit" value="submit"><br>
 	</form>
 	
-	<h1><br> Your last 10 posts</h1>
+	<h2><br><br> Your last 10 posts</h2>
 	<% current_user.posts.last(10).reverse.each do |x| %>
 	<p><%= x.content %></p>
 	<% end %>
