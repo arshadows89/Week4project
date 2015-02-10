@@ -2,6 +2,7 @@
 	<div id="profilepic">
 		<img src="/images/profile.png" style="
 		width:100% ">
+		<% if session[:user_id] != nil %>
 		<form action="/follow/:id" method="POST" style="float:left; margin-right:20px;">
 		<p><a href="/follow/<%= @user.id %>">Click to follow this user</a></p>
 	</form>
@@ -12,6 +13,7 @@
 		<p>Interest1:&nbsp;<%= @user.Interest1 %></p>
 		<p>Interest2:&nbsp;<%= @user.Interest2 %></p>
 		<p>interest3:&nbsp;<%= @user.Interest3 %></p>
+		<% end %>
 		<p><b>Users you have followed</b></p>
 		<div id="followed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
