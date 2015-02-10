@@ -127,7 +127,6 @@ post '/post_feed' do
   end
   redirect '/profile'
 end
-onship = Relationship.new(follower_id: current_user.id, followed_id: User.find(params[:id]))
 
 
 get '/follow/:id' do
@@ -143,13 +142,9 @@ get '/follow/:id' do
 end
 
    
-end
 
-# get "/profile/:id" do
-#   @user = User.find(params[:id])
-#   @@user = User.find(params[:id])
-#   erb :profile
-# end
+
+
 
 
 
