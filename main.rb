@@ -127,6 +127,7 @@ post '/post_feed' do
   end
   redirect '/profile'
 end
+onship = Relationship.new(follower_id: current_user.id, followed_id: User.find(params[:id]))
 
 
 get '/follow/:id' do
@@ -134,11 +135,12 @@ get '/follow/:id' do
   if @relationship.save
     redirect back
     flash[:notice] = "You've successfully followed #{User.find(params[:id]).username}."
-    
   else
     redirect back
     flash[:alert] = "There was an error following that user."
   end
+  redirect '/profile'
+end
 
    
 end
